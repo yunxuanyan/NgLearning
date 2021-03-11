@@ -1,0 +1,11 @@
+:host::ng-deep {
+    font-style: italic;
+  }
+
+:host::ng-deep p{
+    font-size: xx-large;
+}
+
+::ng-deep p{
+  border: 1px solid green;
+}

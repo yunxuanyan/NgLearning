@@ -1,0 +1,7 @@
+:host(.active) {
+    font-size: 24px;
+    color:red;
+}
+:host(.active) p{
+    background-color: aquamarine;
+}
