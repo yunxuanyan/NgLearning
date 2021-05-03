@@ -1,0 +1,7 @@
+<p>route-child works!</p>
+<p>Params:</p>
+<p *ngFor="let item of params | keyvalue">{{ item.key }}:{{ item.value }}</p>
+<p>Query Params:</p>
+<p *ngFor="let item of queryParams | keyvalue">
+  {{ item.key }}:{{ item.value }}
+</p>

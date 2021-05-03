@@ -1,0 +1,20 @@
+<p>route-params works!</p>
+
+<nav>
+  <ul>
+    <li><a [routerLink]="['./child']">RouteChild</a></li>
+    <li><a [routerLink]="['./child', 'grand-child']">RouteArrayChild</a></li>
+    <li><a [routerLink]="['./child', { foo: 'foo' }]">RouteObjectChild</a></li>
+    <li>
+      <a
+        [routerLink]="['./child']"
+        [queryParams]="{ foo: 'foo' }"
+        fragment="education"
+        >RouteQueryChild</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
+<router-outlet name="extraOutlet"></router-outlet>

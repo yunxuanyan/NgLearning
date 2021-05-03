@@ -1,25 +1,25 @@
 <div>
   <div><p>Pipes here</p></div>
   <div>
-    <p>DatePipe: {{ today }}:{{ today | date }}</p>
-    <p>CurrencyPipe: {{ money }}:{{ money | currency: "EUR":"Euros" }}</p>
-    <p>UpperCasePipe: {{ aString }}:{{ aString | uppercase }}</p>
-    <p>LowerCasePipe: {{ aString }}:{{ aString | lowercase }}</p>
-    <p>DecimalPipe: {{ aNumber }}:{{ aNumber | number }}</p>
-    <p>PercentPipe: {{ aNumber }}:{{ aNumber | percent }}</p>
-    <p>KeyValuePipe</p>
-    <p>Object</p>
+    <h2>DatePipe: {{ today }}:{{ today | date }}</h2>
+    <h2>CurrencyPipe: {{ money }}:{{ money | currency: "EUR":"Euros" }}</h2>
+    <h2>UpperCasePipe: {{ aString }}:{{ aString | uppercase }}</h2>
+    <h2>LowerCasePipe: {{ aString }}:{{ aString | lowercase }}</h2>
+    <h2>DecimalPipe: {{ aNumber }}:{{ aNumber | number }}</h2>
+    <h2>PercentPipe: {{ aNumber }}:{{ aNumber | percent }}</h2>
+    <h2>KeyValuePipe</h2>
+    <h3>Object</h3>
     <p *ngFor="let item of obj | keyvalue">{{ item.key }}:{{ item.value }}</p>
-    <p>Map</p>
+    <h3>Map</h3>
     <p *ngFor="let item of map | keyvalue">{{ item.key }}:{{ item.value }}</p>
-    <p>SlicePipe</p>
-    <p>For Collection:</p>
+    <h2>SlicePipe</h2>
+    <h3>For Collection:</h3>
     <span *ngFor="let i of collection | slice: 1:3"> {{ i }} </span>
     <span *ngFor="let i of collection | slice: -3:-1"> {{ i }} </span>
-    <p>For String:</p>
+    <h3>For String:</h3>
     <span>{{ aString }}[1:5]:'{{ aString | slice: 1:5 }}'</span>
-    <p>TitleCasePipe: {{ plainString }}:{{ plainString | titlecase }}</p>
-    <p>I18nSelectPipe: {{ gender }}: {{ gender | i18nSelect: inviteMap }}</p>
-    <p>I18nPluralPipe: {{ messages.length | i18nPlural: messageMapping }}</p>
+    <h2>TitleCasePipe: {{ plainString }}:{{ plainString | titlecase }}</h2>
+    <h2>I18nSelectPipe: {{ gender }}: {{ gender | i18nSelect: inviteMap }}</h2>
+    <h2>I18nPluralPipe: {{ messages.length | i18nPlural: messageMapping }}</h2>
   </div>
 </div>
