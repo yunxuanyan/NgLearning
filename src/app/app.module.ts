@@ -6,6 +6,7 @@ import { PipesModule } from "./pipes/pipes.module";
 import { StyleModule } from "./style/style.module";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { RouteModule } from "./route/route.module";
+import { DirectiveModule } from "./directive/directive.module";
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
@@ -15,6 +16,7 @@ import { RouteModule } from "./route/route.module";
     StyleModule,
     PipesModule,
     RouteModule,
+    DirectiveModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

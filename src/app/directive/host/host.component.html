@@ -1,0 +1,23 @@
+<h2>Directive</h2>
+<h3>Built-in directives</h3>
+<div [ngClass]="isRed ? 'highlight-red' : 'highlight-yellow'">
+  This is a ngClass demo
+</div>
+<!--should import FormsModule in this Module declaration-->
+<input type="checkbox" [(ngModel)]="isItalic" />Italic
+<input type="checkbox" [(ngModel)]="isBold" />Bold
+<!--if input use onclick, the method setCustomerStyle() can't be found -->
+<input type="button" (click)="setCustomerStyle()" value="Check" />
+<div [ngStyle]="customerStyle">This is a ngStyle and ngModel demo</div>
+
+<h3>Attribute directives</h3>
+<p appColourChanger [colour]="'yellow'">host works!</p>
+<p [highlight]="'red'">Red-highlighted host</p>
+<div [highlight]="'red'">Another host</div>
+<p ngNonBindable [highlight]="'red'">ngNonBindable: {{ 1 + 1 }}</p>
+<p [highlight]="'red'">Without ngNonBindable: {{ 1 + 1 }}</p>
+
+<h3>Structual directives</h3>
+<input type="checkbox" [(ngModel)]="condition" />Condition
+<p *appUnless="condition">Show this sentence unless the condition is true.</p>
+<p *appUnless="!condition">Show this sentence unless the condition is false.</p>
