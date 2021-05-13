@@ -7,6 +7,7 @@ import { StyleModule } from "./style/style.module";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { RouteModule } from "./route/route.module";
 import { DirectiveModule } from "./directive/directive.module";
+import { FormModule } from "./form/form.module";
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
@@ -17,6 +18,7 @@ import { DirectiveModule } from "./directive/directive.module";
     PipesModule,
     RouteModule,
     DirectiveModule,
+    FormModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
