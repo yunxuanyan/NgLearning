@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
+import { mergeDeepLeft } from "ramda";
+
 @Component({
   selector: "app-pipes",
   templateUrl: "./pipes.component.html",
@@ -37,5 +39,27 @@ export class PipesComponent implements OnInit {
   collection: string[] = ["a", "b", "c", "d"];
   constructor() {}
 
-  ngOnInit() {}
+  girla = {
+    name: { firstName: "Betty", lastName: "Foster" },
+    contract: {
+      address: { city: "wellington", suburb: "Thorndon" },
+      cellNumber: "0000000",
+    },
+    mail: "a",
+  };
+  girlb = {
+    name: { firstName: "Julie" },
+    contract: { address: { city: "Auckland", code: "1111" } },
+    mail: "b",
+    email: "julie@gmail.com",
+  };
+
+  ngOnInit() {
+    //把girlb在girla中没有的property，加入到girla中,并不进入第二层
+    console.log({ ...this.girlb, ...this.girla });
+    //把girlb中的值复写到girla中，相同的值会覆盖掉，会进入深层覆盖
+    console.log(mergeDeepLeft(this.girlb, this.girla));
+    //
+    console.log(Object.assign(this.girlb, this.girla));
+  }
 }
