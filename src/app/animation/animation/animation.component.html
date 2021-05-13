@@ -1,0 +1,8 @@
+<p>animation works!</p>
+<input
+  [@openClose]="isOpen ? 'open' : 'closed'"
+  type="button"
+  (click)="trigger()"
+  value="Trigger"
+/>
+<p>The box is now {{ isOpen ? "Open" : "Closed" }}!!</p>
