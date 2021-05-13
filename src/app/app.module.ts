@@ -1,6 +1,7 @@
 import { AnimationsModule } from "./animation/animation.module";
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { BrowserModule } from "@angular/platform-browser";
 import { DirectiveModule } from "./directive/directive.module";
 import { FormModule } from "./form/form.module";
@@ -14,6 +15,7 @@ import { StyleModule } from "./style/style.module";
   declarations: [AppComponent, PageNotFoundComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     StyleModule,
     PipesModule,

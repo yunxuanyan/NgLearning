@@ -1,12 +1,13 @@
-import { RouterModule } from "@angular/router";
 import { ExtraRouterOutletComponent } from "./extra-router-outlet/extra-router-outlet.component";
 import { RouteChildComponent } from "./route-child/route-child.component";
 import { RouteParamsComponent } from "./route-params/route-params.component";
+import { RouterModule } from "@angular/router";
 
 const routeRoutes = [
   {
     path: "routes",
     component: RouteParamsComponent,
+    data: { animation: "Routes" },
     children: [
       {
         path: "child",

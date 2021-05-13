@@ -17,7 +17,9 @@
     <li><a [routerLink]="['/animation']">Animation</a></li>
   </ul>
 </nav>
-<router-outlet></router-outlet>
+<div [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
 <!-- <app-host-parent class="active2"></app-host-parent> -->
 <!-- <app-host-context-parent class="active2"></app-host-context-parent> -->
 <!-- <app-ng-deep-parent></app-ng-deep-parent> -->
