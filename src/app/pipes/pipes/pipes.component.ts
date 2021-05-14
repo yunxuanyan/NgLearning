@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
+import { DomSanitizer } from "@angular/platform-browser";
 import { mergeDeepLeft } from "ramda";
 
 @Component({
@@ -37,7 +38,6 @@ export class PipesComponent implements OnInit {
   };
 
   collection: string[] = ["a", "b", "c", "d"];
-  constructor() {}
 
   girla = {
     name: { firstName: "Betty", lastName: "Foster" },
@@ -53,6 +53,17 @@ export class PipesComponent implements OnInit {
     mail: "b",
     email: "julie@gmail.com",
   };
+  public htmlSnippet = 'Template <script>alert("0wned")</script> <b>Syntax</b>';
+  public dangerousUrl;
+  public trustedUrl;
+
+  constructor(private sanitizer: DomSanitizer) {
+    // javascript: URLs are dangerous if attacker controlled.
+    // Angular sanitizes them in data binding, but you can
+    // explicitly tell Angular to trust this value:
+    this.dangerousUrl = 'javascript:alert("Hi there")';
+    this.trustedUrl = sanitizer.bypassSecurityTrustUrl(this.dangerousUrl);
+  }
 
   ngOnInit() {
     //把girlb在girla中没有的property，加入到girla中,并不进入第二层
