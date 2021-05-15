@@ -53,7 +53,8 @@ export class PipesComponent implements OnInit {
     mail: "b",
     email: "julie@gmail.com",
   };
-  public htmlSnippet = 'Template <script>alert("0wned")</script> <b>Syntax</b>';
+  private htmlSnippet =
+    'Template <script>alert("0wned")</script> <b>Syntax</b>';
   public dangerousUrl;
   public trustedUrl;
 

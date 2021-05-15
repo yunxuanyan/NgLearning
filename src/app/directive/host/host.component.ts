@@ -6,7 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./host.component.css"],
 })
 export class HostComponent implements OnInit {
-  isRed: boolean;
+  private isRed: boolean;
   customerStyle: object;
   isItalic: boolean;
   isBold: boolean;
@@ -15,7 +15,7 @@ export class HostComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.isRed = false;
+    this.isRed = true;
   }
 
   setCustomerStyle() {
