@@ -1,16 +1,17 @@
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async } from "@angular/core/testing";
 
-import { HostContextChildComponent } from './host-context-child.component';
+import { HostContextChildComponent } from "./host-context-child.component";
+import { NO_ERRORS_SCHEMA } from "@angular/core";
 
-describe('HostContextChildComponent', () => {
+describe("HostContextChildComponent", () => {
   let component: HostContextChildComponent;
   let fixture: ComponentFixture<HostContextChildComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HostContextChildComponent ]
-    })
-    .compileComponents();
+      declarations: [HostContextChildComponent],
+      schemas: [NO_ERRORS_SCHEMA],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +20,7 @@ describe('HostContextChildComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

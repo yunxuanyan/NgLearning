@@ -1,16 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async } from "@angular/core/testing";
 
-import { ReactiveFormsComponent } from './reactive-forms.component';
+import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { ReactiveFormsComponent } from "./reactive-forms.component";
 
-describe('ReactiveFormsComponent', () => {
+describe("ReactiveFormsComponent", () => {
   let component: ReactiveFormsComponent;
   let fixture: ComponentFixture<ReactiveFormsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReactiveFormsComponent ]
-    })
-    .compileComponents();
+      declarations: [ReactiveFormsComponent],
+      schemas: [NO_ERRORS_SCHEMA],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +20,7 @@ describe('ReactiveFormsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

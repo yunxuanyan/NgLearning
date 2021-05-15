@@ -1,16 +1,19 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async } from "@angular/core/testing";
 
-import { HostComponent } from './host.component';
+import { FormsModule } from "@angular/forms";
+import { HostComponent } from "./host.component";
+import { NO_ERRORS_SCHEMA } from "@angular/core";
 
-describe('HostComponent', () => {
+describe("HostComponent", () => {
   let component: HostComponent;
   let fixture: ComponentFixture<HostComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HostComponent ]
-    })
-    .compileComponents();
+      declarations: [HostComponent],
+      imports: [FormsModule],
+      schemas: [NO_ERRORS_SCHEMA],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +22,7 @@ describe('HostComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

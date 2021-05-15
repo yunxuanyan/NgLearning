@@ -1,16 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async } from "@angular/core/testing";
 
-import { NgDeepParentComponent } from './ng-deep-parent.component';
+import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { NgDeepParentComponent } from "./ng-deep-parent.component";
 
-describe('NgDeepParentComponent', () => {
+describe("NgDeepParentComponent", () => {
   let component: NgDeepParentComponent;
   let fixture: ComponentFixture<NgDeepParentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgDeepParentComponent ]
-    })
-    .compileComponents();
+      declarations: [NgDeepParentComponent],
+      schemas: [NO_ERRORS_SCHEMA],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +20,7 @@ describe('NgDeepParentComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

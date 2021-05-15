@@ -1,16 +1,19 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async } from "@angular/core/testing";
 
-import { GrandParentComponent } from './grand-parent.component';
+import { GrandParentComponent } from "./grand-parent.component";
+import { HostParentComponent } from "../host-parent/host-parent.component";
+import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { NgDeepParentComponent } from "../ng-deep-parent/ng-deep-parent.component";
 
-describe('GrandParentComponent', () => {
+describe("GrandParentComponent", () => {
   let component: GrandParentComponent;
   let fixture: ComponentFixture<GrandParentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GrandParentComponent ]
-    })
-    .compileComponents();
+      declarations: [GrandParentComponent],
+      schemas: [NO_ERRORS_SCHEMA],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +22,7 @@ describe('GrandParentComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
